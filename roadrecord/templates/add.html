@@ -1,0 +1,21 @@
+<h1>Add accident</h1>
+
+<form action="addrecord/" method="post">
+{% csrf_token %}
+Highway:<br>
+<input name="highway">
+<br><br>
+Month:<br>
+<input name="month">
+<br><br>
+Day or Night?
+<input name="day_night">
+<br><br>
+Mile Marker
+<input name="marker">
+<br><br>
+Fatal or Non-fatal?
+<input name="fatal_non">
+<br><br>
+<input type="submit" value="Submit">
+</form>
