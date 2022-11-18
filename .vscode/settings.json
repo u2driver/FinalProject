@@ -1,0 +1,57 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3301,
+            "driver": "MySQL",
+            "name": "myconnection",
+            "database": "db.sqlite3",
+            "username": "u2driver",
+            "password": ""
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3307,
+            "driver": "MySQL",
+            "name": "newconnection",
+            "database": "db.sqlite3",
+            "username": "u2driver",
+            "password": ""
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3307,
+            "driver": "MySQL",
+            "name": "u2connect",
+            "database": "db.sqlite3",
+            "username": "u2driver",
+            "password": ""
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "u2connection",
+            "database": "db.sqlite3",
+            "username": "u2driver",
+            "password": ""
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
