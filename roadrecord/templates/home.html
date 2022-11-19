@@ -3,11 +3,12 @@
 <table border="1">
 {% for x in crashes %}
 <tr>
-<td>{{ x.id }}</td>
-<td>{{ x.highway }}</td>
-<td>{{ x.month }}</td>
-<td>{{ x.day_night }}</td>
-<td>{{ x.fatal_non }}</td>
+    <td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+    <td>{{ x.id }}</td>
+    <td>{{ x.highway }}</td>
+    <td>{{ x.month }}</td>
+    <td>{{ x.day_night }}</td>
+    <td>{{ x.fatal_non }}</td>
 </tr>
 {% endfor %}
 </table>

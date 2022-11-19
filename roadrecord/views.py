@@ -37,3 +37,33 @@ def addrecord(request):
   crash = Accidents(highway = v, month = w, day_night = x, marker = y, fatal_non = z)
   crash.save()
   return HttpResponseRedirect(reverse('home'))
+
+def update(request, id):
+  crashes = Accidents.objects.get(id=id)
+  template = loader.get_template('update.html')
+  context = {
+    'crashes': crashes,
+  }
+  return HttpResponse(template.render(context, request))
+
+def updaterecord(request, id):
+  highway = request.POST['highway']
+  month = request.POST['month']
+  day_night = request.POST['day_night']
+  marker = request.POST['marker']
+  fatal_non = request.POST['fatal_non']
+  crashes = Accidents.objects.get(id=id)
+  crashes.highway = highway
+  crashes.month = month
+  crashes.day_night = day_night
+  crashes.marker = marker
+  crashes.fatal_non = fatal_non
+  crashes.save()
+  return HttpResponseRedirect(reverse('home'))
+
+def testing(request):
+  template = loader.get_template('template.html')
+  context = {
+    'firstname': 'David',
+  }
+  return HttpResponse(template.render(context, request))

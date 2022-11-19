@@ -1,0 +1,21 @@
+<h1>Update Crashes</h1>
+
+<form action="updaterecord/{{ crashes.id }}" method="post">
+{% csrf_token %}
+Highway:<br>
+<input name="highway" value="{{ crashes.highway }}">
+<br><br>
+Month:<br>
+<input name="month" value="{{ crashes.month }}">
+<br><br>
+Day or Night?:<br>
+<input name="day_night" value="{{ crashes.day_night }}">
+<br><br>
+Mile Marker?:<br>
+<input name="marker" value="{{ crashes.marker }}">
+<br><br>
+Fatal or Non-fatal?:<br>
+<input name="fatal_non" value="{{ crashes.fatal_non }}">
+<br><br>
+<input type="submit" value="Submit">
+</form>
