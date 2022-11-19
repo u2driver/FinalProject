@@ -62,7 +62,7 @@ def updaterecord(request, id):
   return HttpResponseRedirect(reverse('home'))
 
 def testing(request):
-  crashes = Accidents.objects.filter(highway='I25', month = 'Dec').values()
+  crashes = Accidents.objects.filter(highway='I25', month = 'Jan', marker__range = (50, 60)).values()
   template = loader.get_template('template.html')
   context = {
     'crashes': crashes,
