@@ -62,8 +62,9 @@ def updaterecord(request, id):
   return HttpResponseRedirect(reverse('home'))
 
 def testing(request):
+  crashes = Accidents.objects.filter(highway='I25', month = 'Dec').values()
   template = loader.get_template('template.html')
   context = {
-    'firstname': 'David',
+    'crashes': crashes,
   }
   return HttpResponse(template.render(context, request))
